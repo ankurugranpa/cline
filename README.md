@@ -1,1 +1,1 @@
-# cli-notify
+# line notify for cli
