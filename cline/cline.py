@@ -51,7 +51,7 @@ class Cline():
 
     def status_code(self, code:dict):
         if(code["status"] != 200):
-            print(f"ERROR: {code["message"]}")
+            print(f"ERROR: {code['message']}")
 
     def show_status_code(self):
         print(self.__status_code)
@@ -61,13 +61,13 @@ class Cline():
         header =  self.__response_headers
         print("<=== Line Notify Status ===>")
         print("## Yor Status ##")
-        print(f"残りの送信可能回数: {header["X-RateLimit-Remaining"]}")
-        print(f"残りの画像送信可能回数: {header["X-RateLimit-ImageRemaining"]}")
+        print(f"残りの送信可能回数: {header['X-RateLimit-Remaining']}")
+        print(f"残りの画像送信可能回数: {header['X-RateLimit-ImageRemaining']}")
         print("")
         print("## Rate Limit ##")
-        print(f"1時間に送信可能な画像枚数上限: {header["X-RateLimit-ImageLimit"]}")
-        print(f"1時間に送信可能なメッセージ上限: {header["X-RateLimit-Limit"]}")
-        print(f"次の制限のリセット日時: {datetime.datetime.fromtimestamp(int(header["X-RateLimit-Reset"]))}")
+        print(f"1時間に送信可能な画像枚数上限: {header['X-RateLimit-ImageLimit']}")
+        print(f"1時間に送信可能なメッセージ上限: {header['X-RateLimit-Limit']}")
+        print(f"次の制限のリセット日時: {datetime.datetime.fromtimestamp(int(header['X-RateLimit-Reset']))}")
         
 
 
