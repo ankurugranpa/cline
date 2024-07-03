@@ -1,4 +1,4 @@
-# Line Notify for ClI
+# Line Notify for CLI
 [Line Notify](https://notify-bot.line.me/ja/)をcli上からいい感じに使えるようにする cli tool
 
 
