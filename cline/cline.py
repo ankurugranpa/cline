@@ -3,6 +3,7 @@ import argparse
 import datetime
 from pathlib import Path
 from typing import Optional, Dict, BinaryIO
+import sys
 
 import requests
 from requests.models import CaseInsensitiveDict
@@ -32,7 +33,6 @@ class Cline():
 
     def send(self) -> CaseInsensitiveDict: 
         if (self.__message == None and self.__files == None):
-            print("test")
             return self.check()
         else:
             res = requests.post(self.__line_notify_api, headers = self.__headers, data = self.__message, files=self.__files)
@@ -75,6 +75,11 @@ class Cline():
 def main():
     load_dotenv()
     LINE_NOTIFY_API = os.getenv("LINE_NOTIFY_API")
+    if(LINE_NOTIFY_API == None or LINE_NOTIFY_API == "your_line_notify_api_key"): 
+       print("Error: API KEYが見つかりません。適切に設定してください\nSee:'https://github.com/ankurugranpa/cline?tab=readme-ov-file'",
+             file=sys.stderr)
+       sys.exit(1)
+
 
     # set arg
     parser = argparse.ArgumentParser(description='line notifyを使用したcliからlineへの通知ライブラリ')
