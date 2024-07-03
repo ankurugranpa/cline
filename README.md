@@ -3,8 +3,8 @@
 
 
 ## Requirement
-`python >= 3.8`
-` poetry of pip`
+`python >= 3.8`\
+` poetry` or` pip`
 
 ※ poetryがおすすめ
 ## SetUp
@@ -23,7 +23,7 @@ pip install -r requirement.txt
 ```
 
 ### 環境変数の設定
-LINE_NOTIFY_APIという環境変数を設定する必要があります。
+LINE_NOTIFY_APIという環境変数を設定する必要があります。\
 ※APIキーの取得をしていない方は[こちら](https://notify-bot.line.me/ja/)から取得してください
 - linux系のosの場合
 ```
