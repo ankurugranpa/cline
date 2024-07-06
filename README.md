@@ -19,7 +19,7 @@ poetry install
 ```
 or
 ```
-pip install -r requirement.txt
+pip install -r requirements.txt
 ```
 
 ### 環境変数の設定
@@ -36,7 +36,7 @@ vim .env #.envを好きなエディタで開きtokenを記述
 ```
 
 ## Usage
-引き数に[-i, --message] か [-s, --status] か [-c, --check]のどれか一つは取らなければなりません
+引き数に[-m, --message] か [-s, --status] か [-c, --check]のどれか一つは取らなければなりません
 ```
 usage: cline.py [-h] -m MESSAGE [-i IMAGE] [-s]
 
