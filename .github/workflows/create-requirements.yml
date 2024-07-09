@@ -1,0 +1,33 @@
+name: Create requirements
+
+on:
+  push:
+    branches:
+      - main  
+    paths:
+      - 'poetry.lock'
+      - 'pyproject.toml'
+
+jobs:
+  create:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'  
+
+    - name: Install poetry
+      run: pip install poetry
+
+    - name: Create requirements.txt
+      run: poetry export -f requirements.txt -o requirements.txt
+
+    - name: Auto Commit
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Create requirements.txt
