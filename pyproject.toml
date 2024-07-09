@@ -2,14 +2,13 @@
 name = "cli-notify"
 version = "0.1.0"
 description = ""
-authors = ["ahahahaha <ankuru.ahahahaha@gmail.com>"]
+authors = ["ankuru <ankuru.ahahahaha@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8"
 requests = "^2.32.3"
 python-dotenv = "^1.0.1"
-beautifulsoup4 = "^4.12.3"
 
 
 [build-system]
