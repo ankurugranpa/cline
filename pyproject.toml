@@ -2,7 +2,7 @@
 name = "cli-notify"
 version = "0.1.0"
 description = ""
-authors = ["ankuru <ankuru.ahahahaha@gmail.com>"]
+authors = ["ahahahaha <ankuru.ahahahaha@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
